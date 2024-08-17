@@ -47,10 +47,24 @@ class Car:
 
 class Battery:
     def __init__(self, battery_size:int=40) -> None:
-        self.battery_size = battery_size
+        self.__battery_size = battery_size
 
     def describe_batery(self):
-        print(f"Ten samochód ma akumulator o pojemności {self.battery_size} kWh")
+        print(f"Ten samochód ma akumulator o pojemności {self.__battery_size} kWh")
+
+    def get_range(self):
+        if self.__battery_size == 40:
+            range = 150
+        elif self.__battery_size == 65:
+            range = 225
+        print(f"Zasięg tego samochodu wynosi około {range} km po poełnym naładwoaniu akumulatora")
+
+    def upgrade_battery(self):
+        if self.__battery_size != 65:
+            print("Upgrade battery")
+            self.__battery_size = 65
+        else:
+            print("Baterry was upgraded")
 
 
 class ElectricCar(Car):
@@ -63,5 +77,9 @@ class ElectricCar(Car):
 
 my_leaf = ElectricCar('nissan', 'leaf', 2024)
 print(my_leaf.describe())
-my_leaf.battery.describe_batery()
 my_leaf.fill_gas_tank()
+my_leaf.battery.describe_batery()
+my_leaf.battery.get_range()
+my_leaf.battery.upgrade_battery()
+my_leaf.battery.get_range()
+my_leaf.battery.upgrade_battery()
