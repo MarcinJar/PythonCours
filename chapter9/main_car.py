@@ -1,6 +1,5 @@
 import os
 
-# from car import Car
 from car import ElectricCar, Car
 
 os.system("clear")

@@ -1,4 +1,4 @@
-from restaurant import Restaurant
+from .restaurant import Restaurant
 
 class IceCreamStand(Restaurant):
     def __init__(self, name: str, type: str, flavors: int) -> None:

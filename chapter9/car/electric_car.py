@@ -1,4 +1,4 @@
-from car import Car
+from .car import Car
 
 class Battery:
     def __init__(self, battery_size:int=40) -> None:
