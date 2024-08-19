@@ -1,0 +1,4 @@
+W Pythonie można programować
+W Pythonie można odczytywać text z pliku
+W Pythonie można tworzyć interaktywne programy
+W Pythonie można dobrze się bawić programując
